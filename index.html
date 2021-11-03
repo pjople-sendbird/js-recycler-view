@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycler View</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sendbird/3.0.160/SendBird.min.js" integrity="sha512-rNEZDjYVcmn+S2STkT2ep9fk6k5mutSAGKoTmWHaXZAxqNKEspZUgzVWMszQX1PJeeSSiDLs/Fr3s6z7DqgOqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .list {
+            border:1px solid #ccc;
+            height: 200px;
+            width: 200px;
+            margin: 0.5rem;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .msg {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="moveUp()">Move up</button>
+    <div id="list" class="list"></div>
+    <button onclick="moveDown()">Move down</button>
+    <button onclick="newMessageArrives()" id="butNewMessages" style="display:none">New messages</button>
+
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
