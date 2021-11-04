@@ -80,3 +80,13 @@ function moveDown() {
     var timestamp = messages[ messages.length - 1 ].createdAt;
     getnextMessages(timestamp);
 }
+
+/**
+ * Optional. This will capture your scroll to the top of the list of messages.
+ */
+document.getElementById("list").addEventListener("scroll", function () {
+    if (this.scrollTop == 0) {
+      getPrevMessages(messages[0].createdAt);
+    }
+});
+
